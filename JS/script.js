@@ -24,9 +24,13 @@ function imprima(num){
             console.log("C is fun")
             
         }
-    }else if (typeof num ==="undefined"){
-        console.log("Es un string")
+    }if (typeof num === "undefined"){
+        console.log("Es un undefined")
 
+    }
+    if (typeof num==="string"){
+
+        console.log("Es un string")
     }
 }
 
