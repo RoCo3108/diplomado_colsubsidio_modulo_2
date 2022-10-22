@@ -15,3 +15,19 @@ function primera(parm){
         console.log("Argument found")
     }
 }
+
+function imprima(num){
+    console.log(num)
+
+    if (typeof num === "number") {
+        for (let i = 0; i < num; i++) {
+            console.log("C is fun")
+            
+        }
+    }else if (typeof num ==="undefined"){
+        console.log("Es un string")
+
+    }
+}
+
+console.log( 5 ==="5" )
