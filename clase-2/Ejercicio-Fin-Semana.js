@@ -1,16 +1,13 @@
 //console.log("Hola Ronald Lo lograstes !Felicitaciones\n")
 
-function generateCuadrado(num,letra){
-    if (typeof num  === "number"){
-        for (let i= 0; i < num; i++) {
-            console.log(letra.repeat(num))
-            for (let j = 0; j <num; j++) { 
-            }
-        }
+function generateSquare(number, letter = "X") {
+  if (typeof number === "number") {
+    for (let i = 0; i < number; i++) {
+      console.log(letter.repeat(number));
+      for (let j = 0; j < number; j++) {}
     }
-     else{
-        console.log("Missing Size")
-     }
-
+  } else {
+    console.log("Missing Size");
+  }
 }
-generateCuadrado(6,"X")
+generateSquare(10, "X");

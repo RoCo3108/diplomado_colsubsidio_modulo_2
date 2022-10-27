@@ -1,0 +1,8 @@
+#!/bin/bash
+vim nombre del archivo
+i// permite editar o escribir dentro del archivo
+#!/bin/bash   //por buenas practicas
+salir de la consola despues de haber escrito algo dentro del archivo
+debemos oprimir 
+ESC :WQ  y listo y para ver el archivo es con el comando
+cat
