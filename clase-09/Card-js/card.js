@@ -1,4 +1,4 @@
-const cards = document.getElementById('card')
+const cards = document.getElementById('cards')
 
 const div_card = document.createElement("div");
 div_card.textContent = "Featured"
@@ -14,15 +14,16 @@ parrafo.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 const boton = document.createElement("a");
 boton.textContent = "Go somewhere"
 
-boton.setAttribute('class',"href='#'")
+div_body.setAttribute('class','card-body')
+titulo.setAttribute('class', 'card-title text-center')
 div_card.setAttribute('class', 'card-header bg-primary text-white')
-titulo.setAttribute('class', 'card-title')
-parrafo.setAttribute('class', 'card-text')
+parrafo.setAttribute('class', 'card-text p-4')
+boton.setAttribute('class',"btn btn-primary")
+cards.appendChild(div_card )
 cards.appendChild(div_body)
-cards.appendChild(div_card)
-cards.appendChild(titulo)
-cards.appendChild(parrafo)
-cards.appendChild(boton)
+div_body.appendChild(titulo)
+div_body.appendChild(parrafo)
+div_body.appendChild(boton)
 
 
 
