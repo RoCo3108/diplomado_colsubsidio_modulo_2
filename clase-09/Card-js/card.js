@@ -1,7 +1,7 @@
 const cards = document.getElementById('cards')
 
 const div_card = document.createElement("div");
-div_card.textContent = "Featured"
+div_card.textContent = "Tarjeta de Presentacion"
 
 const div_body = document.createElement("div");
 
@@ -12,7 +12,7 @@ const parrafo = document.createElement("p");
 parrafo.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores odio animi beatae, sint omnis quasi velit ullam recusandae perspiciatis nihil provident magnam saepe deleniti incidunt earum quas eligendi dignissimos minima!"
 
 const boton = document.createElement("a");
-boton.textContent = "Go somewhere"
+boton.textContent = "ver Detalle"
 
 div_body.setAttribute('class','card-body')
 titulo.setAttribute('class', 'card-title text-center')
@@ -24,6 +24,3 @@ cards.appendChild(div_body)
 div_body.appendChild(titulo)
 div_body.appendChild(parrafo)
 div_body.appendChild(boton)
-
-
-
