@@ -42,4 +42,4 @@ function dimeCuantasCardsQuieresQueSea(mizin) {
 
 
 
-dimeCuantasCardsQuieresQueSea(4);
+dimeCuantasCardsQuieresQueSea(2);
