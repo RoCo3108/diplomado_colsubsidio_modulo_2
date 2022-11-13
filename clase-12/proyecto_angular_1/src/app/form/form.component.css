@@ -1,0 +1,20 @@
+.list{
+    list-style: none;
+}
+li{
+    font-weight: bold;
+}
+.griegas{
+
+    list-style-type:lower-greek;
+}
+.circulo{
+
+    list-style-type: circle;
+}
+.romanos{
+    list-style-type: lower-roman;
+}
+.cuadrado{
+    list-style-type: square;
+}

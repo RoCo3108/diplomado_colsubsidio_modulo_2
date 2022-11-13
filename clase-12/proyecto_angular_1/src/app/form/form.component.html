@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="mb-3">
+      <label for="example" class="form-label text-primary">Ejercicio
+        <input type="text" class="form-control" id="example" placeholder="Ingrese un valor">
+      </label>
+    </div>
+  </div>
+  <h4>Lista sin elementos graficos</h4>
+  <ul class="list">
+    <!-- <li *ngif = "miarray.length === 0">No hay nombres</li> -->
+    <li *ngFor="let items of miarray; index as i">{{items}}</li>
+  </ul>
+  <br>
+  <h4>Lista con circulos</h4>
+  <ul class="circulo">
+    <li *ngFor="let items of miarray; index as i">{{items}}</li>
+  </ul>
+  <br> 
+  <div>
+    <h4>Lista con Cuadrados</h4>
+        <ul class="cuadrado">
+            <!-- <li *ngif = "miarray.length === 0">No hay nombres</li> -->
+            <li *ngFor="let items of miarray; index as i">{{items}}</li>
+        </ul>
+  </div> 
+  <br>
+  <h4>Lista con numero romanos</h4>
+  <ol class="romanos">
+    <!-- <li *ngif = "miarray.length === 0">No hay nombres</li> -->
+    <li *ngFor="let items of miarray; index as i">{{items}}</li>
+  </ol>
+  <br>
+  <h4>Lista con letras griegas</h4>
+  <ul class="griegas">
+    <!-- <li *ngif = "miarray.length === 0">No hay nombres</li> -->
+    <li *ngFor="let items of miarray; index as i">{{items}}</li>
+  </ul>
+</div>
+
+
+
