@@ -1,7 +1,19 @@
 <h1>Bienvenidos a {{title}}</h1>
 <br>
+<!-- <div class="container">
+    <div class="row mt-4">
+        <div *ngFor = "let items of cards" class="col-4" style="width: 18rem;">
+            <app-card [cardInfo]="items"></app-card>
+            
+        </div>
+    </div>
+</div> -->
+<div class="container">
+    <div class="row">
+        <app-card ></app-card>
+    </div>
+</div>
 
-<app-card></app-card>
 <br>
 <app-form></app-form>
 

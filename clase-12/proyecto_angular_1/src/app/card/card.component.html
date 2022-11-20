@@ -1,13 +1,15 @@
-<div class="container">
-  <div class="row">
-      <div class="card " style="width: 17rem;"  *ngFor="let item of Card;">
-        <img src="https://basicinfoweb.files.wordpress.com/2016/04/mercadeo_web_marketing.png" class="card-img-top" alt="logo de web">
-        <div class="card-body">
-          <h5 class="card-title">{{title}}</h5>
-          <p class="card-text">{{text}}</p>
-          <a href="#" class="btn btn-outline-primary">{{button}}</a>
-        </div>
-      </div>
-  </div>
-</div>
+     <div class="card " style="width: 17rem;">
+       <img [src]="characterInfo.image" class="card-img-top" alt="logo de web">
+       <div class="card-body">
+         <h5 class="card-title">{{ characterInfo.name}}</h5>
+         <p class="card-text">{{characterInfo.status}}</p>
+         <!-- <a  href="#" class="btn btn-outline-primary">{{cardInfo.button}}</a> -->
+       </div>
 
+     </div>
+     <div class="my-4">
+      <input #phone placeholder="phone number" />
+     </div>
+    <div>
+      <button (click)="getCharacter(152)" class="btn btn-primary">Traer Personaje</button>
+    </div>

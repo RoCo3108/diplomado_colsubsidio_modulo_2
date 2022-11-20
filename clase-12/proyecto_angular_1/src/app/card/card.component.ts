@@ -1,47 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { card } from './card.model';
+import { RickAndMortyServicesService } from '../services/rick-and-morty-services.service';
+
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
 })
-export class CardComponent{
+export class CardComponent {
+  @Input() cardInfo: card = {
+    title: 'Titulo Nuevo',
+    text: 'Contenido Nuevo',
+    button: 'Pulsar Nuvo',
+    img:'img-nuevo'
+  };
 
+  characterInfo:any
 
-  title: string = "Card title"
-  text:string = "Some quick example text to build on the card title and make up the bulk of the card's content"
-  button: string = "Go somewhere"
-  Card: Object[] = [
-    {
-      title: "Card title",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-      button: "Go somewhere"
+  constructor(private RMService: RickAndMortyServicesService) {}
+
+  getCharacter(chNum: number) {
+    this.RMService.character(chNum).subscribe(response => {
+
+      this.characterInfo = response
+      console.log(response)
     },
-    
-    {
-      title: "Card title",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-      button: "Go somewhere"
-    },
-    {
-      title: "Card title",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-      button: "Go somewhere"
-    },
-    {
-      title: "Card 2 title",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-      button: "Go somewhere"
-    },
-    {
-      title: "Card 3 title",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-      button: "Go somewhere"
-    },
-     {
-      title: "Card title",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-      button: "Go somewhere"
-    }
-    ];
+    error => console.log(error)
+     
+    );
+  }
 }
