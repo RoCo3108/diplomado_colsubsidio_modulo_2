@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { card } from './card/card.model';
+import { RickAndMortyServicesService } from './services/rick-and-morty-services.service';
 
 @Component({
   selector: 'app-root',
@@ -7,33 +7,46 @@ import { card } from './card/card.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'Angular Diplomado ';
+  title: string = 'Diplomado Angular ';
 
+  locationInfo: any
+
+  cards:  any = [] 
+
+  constructor(private RMService: RickAndMortyServicesService) {}
   
 
- /*cards:  card [] = [{
+  getLocation(locationId: any) {
+    const obs = this.RMService.location(locationId)
+      obs.subscribe(
+        response => {
+        this.locationInfo = response
+        this.locationInfo.residents.forEach((element:any) =>{
+          // console.log(element)
+          this.RMService.character(element)
+          this.getResidents()
+        }),
+        console.log(response)
+       //this.getResidents()
+      },
+      error => {console.log(Response)} 
+      )
+  }
 
-    title: "Card title 1",
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-    button: "Go somewhere"
-  
-  },
-  {
-    title: "Card title 2",
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-    button: "Go somewhere"
-  
-  },
-  {
-    title: "Tarjeta title",
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-    button: "Go somewhere"
-  
-  },
-  {
-    title: "Card title 4",
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content",
-    button: "Go somewhere"
-  
-  },]*/
+
+  getResidents() {
+    console.log(this.locationInfo.residents);
+    this.locationInfo.residents.forEach((elemento: string)=>{
+      const obs = this.RMService.character(elemento)
+      obs.subscribe(
+        response => { 
+        this.cards.push(response)
+        console.log(this.cards)
+        },
+        (error: any) => console.log(error)
+      )
+    });
+  }
 }
+
+

@@ -1,0 +1,24 @@
+    <h3> Login</h3>
+    <!-- <form  (ngSubmit)="onSubmit()" #myForm="ngForm"> -->
+      <form (ngSubmit)="onRegister(myForm)" #myForm="ngForm">
+      <div class="mb-3 row">
+        <div class="col-sm-4">
+          <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+          <input type="text" name="name" required class="form-control" id="nombre" [(ngModel)]="register.name">
+        </div>
+        <div class="col-sm-4">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <input type="email" name="email" required class="form-control" id="email" [(ngModel)]="register.email"  value="email@example.com">
+        </div>
+        <div class="col-sm-4">
+          <label for="password" class="col-sm-2 col-form-label">Password</label>
+          <input type="password" name="password" required class="form-control" id="password" [(ngModel)]="register.pwd">
+        </div>
+        <div class="my-3">
+          <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">Registrar</button>
+        </div>
+      </div>
+    </form>
+    <!-- <p>{{register.name}}</p>
+    <p>{{register.email}}</p>
+    <p>{{register.pwd}}</p> -->

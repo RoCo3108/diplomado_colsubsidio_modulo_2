@@ -10,7 +10,12 @@ export class RickAndMortyServicesService {
 
   constructor(private client: HttpClient) {}
 
-  character(chNumber: number){
-    return this.client.get(`${this.API_URL}/character/${chNumber}`)
+  location(id:number | string){
+
+    return this.client.get(`${this.API_URL}/location/${id}`)
+  }
+
+  character(chPersonaje: number | string){
+    return this.client.get(`${chPersonaje}`)
   }
 }
