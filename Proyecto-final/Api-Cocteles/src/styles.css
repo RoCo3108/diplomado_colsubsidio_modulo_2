@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+/* body{
+    background-color: #230312;
+} */
+/* .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    background: #1d000d;
+    padding: 15px 0;
+    padding-bottom: 0;
+} */
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+html {
+    font-size: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+    background-color: transparent;
+}
+.center {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+#feature {
+    /* background: #230312; */
+    padding-bottom: 40px;
+}
