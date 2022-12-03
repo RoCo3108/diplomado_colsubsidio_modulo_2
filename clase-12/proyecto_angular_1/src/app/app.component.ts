@@ -20,13 +20,10 @@ export class AppComponent {
     const obs = this.RMService.location(locationId)
       obs.subscribe(
         response => {
-        this.locationInfo = response
-        this.locationInfo.residents.forEach((element:any) =>{
-          // console.log(element)
-          this.RMService.character(element)
+          this.locationInfo = response
+          this.cards = []
           this.getResidents()
-        }),
-        console.log(response)
+    
        //this.getResidents()
       },
       error => {console.log(Response)} 
@@ -36,12 +33,12 @@ export class AppComponent {
 
   getResidents() {
     console.log(this.locationInfo.residents);
-    this.locationInfo.residents.forEach((elemento: string)=>{
+    this.locationInfo.residents.forEach((elemento: string | any) => {
+      const characterId = elemento.split("/")[5]
       const obs = this.RMService.character(elemento)
       obs.subscribe(
         response => { 
         this.cards.push(response)
-        console.log(this.cards)
         },
         (error: any) => console.log(error)
       )
