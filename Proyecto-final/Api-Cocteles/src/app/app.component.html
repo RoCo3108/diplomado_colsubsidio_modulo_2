@@ -20,13 +20,20 @@
       <form class="d-flex mb-2">
         <input class="form-control me-2" type="number" #idCharater id="location" placeholder="Traer Personaje">
         <button  class="btn btn-outline-warning" type="submit">Ubicacion</button>
-        <!-- (click)=getLocation(idCharater.value) -->
+        <!-- (click)=getLocation(idCharater.value)    ==  (click)=getLocation(idCharater.value)-->
       </form>
     </div>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-    <app-cocteles></app-cocteles>
+
+<app-cocteles></app-cocteles>
+
+
+<!-- <div class="container">
+  <div class="row my-3">
+      <h1 class="my-4 text-info">Bienvenidos al {{title}}</h1>
+    <div class="col-sm-6  col-md-4 col-lg-3 mb-4" *ngFor="let coctel of cocteles">
+      <app-card-cocteles [characterIn]="coctel"></app-card-cocteles>
+    </div>
   </div>
-</div>
+</div> -->

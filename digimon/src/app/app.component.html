@@ -1,0 +1,49 @@
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container d-flex justify-content-evenly">
+      <a class="navbar-brand" href="#"> <img src="../assets/icono.png" alt="" width="30" height="24" class="d-inline-block align-text-top"> Digimones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarCollapse">
+        <ul class="navbar-nav  me-auto  mb-md-0 ">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="">Preguntas</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="number" #idCharater name="location" placeholder="Traer Digimon">
+          <button class="btn btn-outline-warning"  type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- (click)=getDigimones(idCharater.value) -->
+
+<app-slider></app-slider>
+
+<div class="container my-4">
+  <app-table-digimones></app-table-digimones>
+  <div class="row justify-content-sm-center row-col-6 ">
+    <div class="div">
+      <h1 class="text-center text-success">API de Digimon</h1>
+    </div>
+      <div class="card border border-dark shadow p-2 m-5 " style="width: 14rem;" *ngFor="let digimon of digimones">
+        <img [src]="digimon.img" class="card-img-top" alt="logoWeb">
+        <div class="card-body">
+          <h5 class="card-title">{{ digimon.name }}</h5>
+          <p class="card-text">{{ digimon.level }}</p>
+          <button class="btn btn-outline-primary ">Detalle</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
